@@ -39,7 +39,7 @@ export const HeroSection = () => {
         >
           {/* Profile Card */}
           <motion.div
-            className="glass-card p-8 rounded-2xl max-w-md mx-auto mb-8 floating-card"
+            className="glass-card rounded-2xl max-w-md mx-auto mb-8 floating-card overflow-hidden relative h-80"
             whileHover={{ 
               rotateY: 5, 
               rotateX: 5,
@@ -47,22 +47,17 @@ export const HeroSection = () => {
             }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <motion.div
-              className="relative mb-6"
-              whileHover={{ scale: 1.1 }}
-            >
-              <img
-                src={profilePhoto}
-                alt="Developer Profile"
-                className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary glow-pulse"
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 animate-pulse"></div>
-            </motion.div>
-            
-            <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-              Alex Developer
-            </h1>
-            <p className="text-muted-foreground">Full-Stack Developer</p>
+            <img
+              src={profilePhoto}
+              alt="Developer Profile"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-primary opacity-20"></div>
+            <div className="absolute top-4 left-4">
+              <h1 className="text-2xl font-bold text-white drop-shadow-lg">
+                Jashank
+              </h1>
+            </div>
           </motion.div>
 
           {/* Main Content */}
